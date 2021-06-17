@@ -43,10 +43,12 @@ mv metasploit-framework-master/ metasploit-framework
 mv metasploit-framework/ /home/$USER/.
 
 cd /home/$USER/metasploit-framework
+
+mkdir /home/$USER/.msf4
+mkdir /home/$USER/.bundle
+
 bundle install
 
 echo "export PATH=/home/$USER/metasploit-framework:$PATH" > /home/$USER/.bash_profile
 
 EOF
-
-echo " Finished"
