@@ -4,6 +4,7 @@
 #
 # Configure metasploit to run as $USER
 #
+
 echo "*** METASPLOIT INSTALL FOR ALPINE LINUX ***"
 echo
 echo "==> Account configuration."
@@ -41,11 +42,11 @@ unzip -q master.zip
 mv metasploit-framework-master/ metasploit-framework
 mv metasploit-framework/ /home/$USER/.
 
-mkdir /home/$USER/.msf4
-mkdir /home/$USER/.bundle
-
 cd /home/$USER/metasploit-framework
 bundle install
+
+echo "export PATH=/home/$USER/metasploit-framework:$PATH" > /home/$USER/.bash_profile
+
 EOF
 
 echo " Finished"
